@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         ★年次カスタム
+// @name         ★年次カスタムCK
 // @namespace    http://tampermonkey.net/
 // @version      8.0
 // @match        https://midorinet-iwate.cybozu.com/o/ag.cgi?page=DBRecord&did=35*
