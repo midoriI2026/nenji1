@@ -1,5 +1,5 @@
 (function () {
-const VERSION = "v1.0";
+const VERSION = "v1.1";
 console.log("年次チェック:", VERSION);
 'use strict';
 
