@@ -35,17 +35,17 @@ if (location.href.includes("page=DBRecord")) {
         }
 
         const formUrl =
-            `${location.origin}/o/ag.cgi?page=DBForm&did=${did}&rid=${rid}` +
-            `&autoYear=1`;
+              `${location.origin}/o/ag.cgi?page=DBForm&did=${did}&rid=${rid}` +
+              `&mode=reuse&autoYear=1`;  // ←ここを追加
 
         location.href = formUrl;
     };
-
     document.body.appendChild(btn);
 }
 
 /********** DBForm：自動実行 **********/
-if (location.href.includes("page=DBForm")) {
+if (location.href.includes("page=DBForm") &&
+    location.href.includes("mode=reuse")) {
 
     const url = new URL(location.href);
 
