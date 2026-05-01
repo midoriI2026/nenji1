@@ -1,6 +1,4 @@
 (function () {
-const VERSION = "v1.1";
-console.log("年次チェック:", VERSION);
 'use strict';
 
 /********** 共通 **********/
