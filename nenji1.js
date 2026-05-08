@@ -14,11 +14,10 @@ if (location.href.includes("page=DBRecord")) {
         position:fixed;
         top:360px;
         right:20px;
-        z-index:999999;
+        z-index:9999;
         padding:10px 14px;
         background:#2196F3;
         color:#fff;
-        border:none;
     `;
 
     btn.onclick = () => {
@@ -71,14 +70,14 @@ async function runYearCopy() {
 
         const doc = new DOMParser().parseFromString(html, "text/html");
 
-        const daysRaw  = getText(doc, "td.record-value-719");
-        const hoursRaw = getText(doc, "td.record-value-723");
+        const daysRaw  = getText(doc, "td.record-value-719");//元レコード累計日数
+        const hoursRaw = getText(doc, "td.record-value-723");//元レコード累計時間
 
         const days  = normalize(daysRaw);
         const hours = normalize(hoursRaw);
 
-        const fldDays  = document.querySelector("#dz_fld504");
-        const fldHours = document.querySelector("#dz_fld505");
+        const fldDays  = document.querySelector("#dz_fld504");//貼付け先申請前累計日数
+        const fldHours = document.querySelector("#dz_fld505");//貼付け先申請前累計時間
 
         if (!fldDays || !fldHours) {
             alert("貼付先が見つかりません");
